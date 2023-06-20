@@ -1,5 +1,6 @@
 import "@/styles/globals.css"
 import { Metadata } from "next"
+// import Head from "next/head"
 
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
@@ -33,7 +34,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
       <html lang="en" suppressHydrationWarning>
-        <head />
+        {/* <Head /> */}
         <body
           className={cn(
             "min-h-screen bg-background font-sans antialiased",
@@ -44,8 +45,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <div className="relative flex min-h-screen flex-col">
               <SiteHeader />
               <>
-              {/* <div className="flex-1 flex items-center justify-center">{children}</div> */}
-              {children}
+                {/* <div className="flex-1 flex items-center justify-center">{children}</div> */}
+                {children}
               </>
             </div>
             <TailwindIndicator />

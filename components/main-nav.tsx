@@ -21,7 +21,7 @@ interface MainNavProps {
 export function MainNav({ items }: MainNavProps) {
   return (
     <div className="flex gap-6 md:gap-10">
-      <div className="md:hidden h-6 w-6" >
+      <div className="h-6 w-6 md:hidden" >
       <Sheet>
         <SheetTrigger>
           <Icons.menu />
@@ -57,7 +57,7 @@ export function MainNav({ items }: MainNavProps) {
         <span className="inline-block font-bold">{siteConfig.name}</span>
       </Link>
       {items?.length ? (
-        <nav className="hidden md:flex gap-6">
+        <nav className="hidden gap-6 md:flex">
           {items?.map(
             (item, index) =>
               item.href && (

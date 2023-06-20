@@ -28,8 +28,8 @@ const Chat = () => {
           : "text"
         const code = codeLines.join("\n")
         return (
-          <pre className="bg-muted rounded-lg p-4 relative my-2">
-            <p className="bg-primary text-primary-foreground absolute top-0 left-0 right-0 py-1 px-4 m-0 rounded-t text-sm">
+          <pre className="relative my-2 rounded-lg bg-muted p-4">
+            <p className="absolute inset-x-0 top-0 m-0 rounded-t bg-primary px-4 py-1 text-sm text-primary-foreground">
               {normalizedLanguage}
             </p>
             <div className="mt-4">
@@ -46,7 +46,7 @@ const Chat = () => {
 
   return (
     <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-      <div className="flex flex-col gap-2 justify-center items-center mb-24">
+      <div className="mb-24 flex flex-col items-center justify-center gap-2">
         {/* <div className="w-full flex flex-col"> */}
         <Image
           src="/assets/shuna-trans.png"
@@ -58,17 +58,17 @@ const Chat = () => {
         />
         <p>Wanna chat?</p>
         {messages.map((m) => (
-          <div key={m.id} className="max-w-3xl w-full">
+          <div key={m.id} className="w-full max-w-3xl">
             {m.role === "user" ? (
-              <div className="justify-end flex flex-col items-end">
+              <div className="flex flex-col items-end justify-end">
                 <p className="text-muted-foreground">You</p>
-                <p className="leading-7 h-full rounded-md border border-input bg-transparent px-3 py-2 text-sm ring-offset-background ">
+                <p className="h-full rounded-md border border-input bg-transparent px-3 py-2 text-sm leading-7 ring-offset-background ">
                   {m.content}
                 </p>
               </div>
             ) : (
-              <div className="justify-start flex flex-col items-start">
-                <div className="flex items-center gap-2 mb-2">
+              <div className="flex flex-col items-start justify-start">
+                <div className="mb-2 flex items-center gap-2">
                   <Avatar>
                     <AvatarImage src="/assets/shuna.png" />
                     <AvatarFallback>IM</AvatarFallback>
@@ -77,12 +77,12 @@ const Chat = () => {
                 </div>
                 <div>
                   {messageContainsCodeBlock(m.content) ? (
-                    <div className="leading-7 h-full rounded-md border border-input bg-transparent px-3 py-2 text-sm ring-offset-background ">
+                    <div className="h-full rounded-md border border-input bg-transparent px-3 py-2 text-sm leading-7 ring-offset-background ">
                       {renderMessageWithCodeBlock(m.content)}
                     </div>
                   ) : (
                     <div>
-                      <p className="leading-7 h-full rounded-md border border-input bg-transparent px-3 py-2 text-sm ring-offset-background ">
+                      <p className="h-full rounded-md border border-input bg-transparent px-3 py-2 text-sm leading-7 ring-offset-background ">
                         {m.content}
                       </p>
                     </div>
@@ -92,10 +92,10 @@ const Chat = () => {
             )}
           </div>
         ))}
-        <div className="bg-primary-foreground to-white fixed pb-10 pt-4 bottom-0 inset-x-0">
+        <div className="fixed inset-x-0 bottom-0 bg-primary-foreground to-white pb-10 pt-4">
           <form
             onSubmit={handleSubmit}
-            className="mx-auto max-w-lg items-center flex gap-2"
+            className="mx-auto flex max-w-lg items-center gap-2"
           >
             <Input
               value={input}

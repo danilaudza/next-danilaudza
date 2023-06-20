@@ -1,12 +1,6 @@
 import React from "react"
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import ContactForm from "./contactform"
@@ -18,35 +12,25 @@ const ContactPage = () => {
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
           Contact
         </h1>
-        <div className="mt-4 border rounded-lg w-full ">
-          <div className="container relative h-[800px] items-center justify-center grid lg:max-w-none lg:grid-cols-2 lg:px-0">
-            <div className="relative h-full hidden  flex-col bg-muted p-10 text-white dark:border-r lg:flex">
+        <div className="mt-4 w-full rounded-lg border ">
+          <div className="container relative grid h-[800px] items-center justify-center lg:max-w-none lg:grid-cols-2 lg:px-0">
+            <div className="relative hidden h-full  flex-col bg-muted p-10 text-white dark:border-r lg:flex">
               <div
-                className="absolute inset-0 bg-cover rounded-l-lg"
+                className="absolute inset-0 rounded-l-lg bg-cover"
                 style={{
-                  backgroundImage:
-                    "url(https://images.unsplash.com/photo-1590069261209-f8e9b8642343?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1376&q=80)",
+                  backgroundImage: "url(/contact.jpg)",
                 }}
               />
-              <div className="relative z-20 mt-auto">
-                <blockquote className="space-y-2">
-                  <p className="text-lg">
-                    &ldquo;This library has saved me countless hours of work and
-                    helped me deliver stunning designs to my clients faster than
-                    ever before. Highly recommended!&rdquo;
-                  </p>
-                  <footer className="text-sm">Sofia Davis</footer>
-                </blockquote>
-              </div>
+              <div className="relative z-20 mt-auto"></div>
             </div>
             <div className="lg:p-8">
               <Tabs defaultValue="message" className="">
-                <TabsList className="mx-auto w-full sm:w-[350px] grid grid-cols-2">
+                <TabsList className="mx-auto grid w-full grid-cols-2 sm:w-[350px]">
                   <TabsTrigger value="message">Message</TabsTrigger>
                   <TabsTrigger value="link">Links</TabsTrigger>
                 </TabsList>
                 <TabsContent value="message">
-                  <div className="mx-auto flex w-full flex-col justify-center mt-5 space-y-6 sm:w-[350px]">
+                  <div className="mx-auto mt-5 flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
                     <div className="flex flex-col space-y-2 text-center">
                       <h1 className="text-2xl font-semibold tracking-tight">
                         Get in touch
@@ -59,48 +43,52 @@ const ContactPage = () => {
                   </div>
                 </TabsContent>
                 <TabsContent value="link">
-                  <div className="mx-auto flex w-full flex-col justify-center mt-5 space-y-6 sm:w-[350px]">
+                  <div className="mx-auto mt-5 flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
                     <div className="flex flex-col space-y-2 text-center">
                       <h1 className="text-2xl font-semibold tracking-tight">
                         Find me here!
                       </h1>
                       <p className="text-sm text-muted-foreground">
                         24/7 i will read your message
-                        <div>
-                          <Button variant="link">
-                            <a
-                              href="https://github.com/danilaudza"
-                              target="_blank"
-                            >
-                              @github
-                            </a>
-                          </Button>
-                          <Button variant="link">
-                            <a
-                              href="https://www.instagram.com/dlaudza/"
-                              target="_blank"
-                            >
-                              @instagram
-                            </a>
-                          </Button>
-                          <Button variant="link">
-                            <a
-                              href="https://www.youtube.com/@dlaudza"
-                              target="_blank"
-                            >
-                              @youtube
-                            </a>
-                          </Button>
-                          <Button variant="link">
-                            <a
-                              href="https://t.me/dlaudza"
-                              target="_blank"
-                            >
-                              @telegram
-                            </a>
-                          </Button>
-                        </div>
                       </p>
+                      <div>
+                        <Button variant="link">
+                          <a
+                            href="https://github.com/danilaudza"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            @github
+                          </a>
+                        </Button>
+                        <Button variant="link">
+                          <a
+                            href="https://www.instagram.com/dlaudza/"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            @instagram
+                          </a>
+                        </Button>
+                        <Button variant="link">
+                          <a
+                            href="https://www.youtube.com/@dlaudza"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            @youtube
+                          </a>
+                        </Button>
+                        <Button variant="link">
+                          <a
+                            href="https://t.me/dlaudza"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            @telegram
+                          </a>
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </TabsContent>

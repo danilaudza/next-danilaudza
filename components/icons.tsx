@@ -5,12 +5,14 @@ import {
   Twitter,
   Menu,
   Loader2,
+  ChevronsRight,
   type Icon as LucideIcon,
 } from "lucide-react"
 
 export type Icon = LucideIcon
 
 export const Icons = {
+  move: ChevronsRight,
   spinner: Loader2,
   sun: SunMedium,
   moon: Moon,
