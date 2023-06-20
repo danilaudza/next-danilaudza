@@ -1,3 +1,6 @@
+import Image from "next/image"
+import { MapPin } from "lucide-react"
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import {
   Card,
@@ -8,9 +11,6 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
-import Image from "next/image"
-import { MapPin } from "lucide-react"
-
 const TimelineEvent = ({ date, event, desc, where, img }: any) => {
   if (!Array.isArray(desc)) {
     return null // or handle the non-array case accordingly
@@ -19,7 +19,7 @@ const TimelineEvent = ({ date, event, desc, where, img }: any) => {
   return (
     <div className="relative">
       {/* <div className="absolute top-5 -left-3.5 h-6 w-6 rounded-full border-4"> */}
-      <Avatar className="absolute top-5 -left-[2.15rem] h-16 w-16 rounded-full">
+      <Avatar className="absolute left-[-2.15rem] top-5 h-16 w-16 rounded-full">
         <AvatarImage src={img} />
         <AvatarFallback>SN</AvatarFallback>
       </Avatar>
@@ -35,7 +35,7 @@ const TimelineEvent = ({ date, event, desc, where, img }: any) => {
           </ul>
         </CardHeader>
         <CardContent>
-          <div className="flex items-center text-muted-foreground text-sm">
+          <div className="flex items-center text-sm text-muted-foreground">
             <MapPin className="mr-1 h-4 w-4 text-sky-400" />
             {where}
           </div>

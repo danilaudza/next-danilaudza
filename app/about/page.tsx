@@ -10,8 +10,8 @@ const AboutPage = () => {
         </h1>
         <p className="leading-7 [&:not(:first-child)]:mt-6">
           Hi, my name is Dani Laudza{" "}
-          <span className="text-muted-foreground text-sm">
-            (Actually Dhany Laudza but it's fine)
+          <span className="text-sm text-muted-foreground">
+            (Actually Dhany Laudza but it`&apos;`s fine)
           </span>
           . An ordinary guy who has an interest in design, videography, and
           programming. A graduate of the UGM Computer Science study program who

@@ -2,7 +2,7 @@ import TimelineEvent from "./timeline-event"
 
 const Timeline = ({ data }: any) => {
   return (
-    <div className="border-l-2 border-muted ml-3 mt-3 py-16 space-y-14">
+    <div className="ml-3 mt-3 space-y-14 border-l-2 border-muted py-16">
       {data.map((event: any, index: any) => (
         <TimelineEvent
           key={event.id}
