@@ -6,8 +6,6 @@ import {
   CardContent,
   CardDescription,
   CardFooter,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card"
 import {
   HoverCard,
@@ -15,7 +13,7 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card"
 
-const CardSkills = ({ index, items} :any) => {
+const CardSkills = ({ index, items }: any) => {
   return (
     <Card key={index} className="flex flex-col items-center justify-center">
       <CardContent className="mt-8">
@@ -32,7 +30,7 @@ const CardSkills = ({ index, items} :any) => {
                 <h4 className="text-sm font-semibold">{items.name}</h4>
                 <p className="text-sm">{items.desc}</p>
                 <div className="flex  items-end justify-end pt-2">
-                  <a href={items.link} target="_blank">
+                  <a href={items.link} target="_blank" rel="noreferrer">
                     <Button variant="default" className="text-xs ">
                       Here!
                     </Button>

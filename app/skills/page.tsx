@@ -23,8 +23,8 @@ const SkillsPage = () => {
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
           Skills
         </h1>
-        <Tabs defaultValue="language" className="w-full mx-auto mt-5">
-          <TabsList className="grid lg:w-1/2 mx-auto grid-cols-5">
+        <Tabs defaultValue="language" className="mx-auto mt-5 w-full">
+          <TabsList className="mx-auto grid grid-cols-5 lg:w-1/2">
             <TabsTrigger value="language">Language</TabsTrigger>
             <TabsTrigger value="library">Library</TabsTrigger>
             <TabsTrigger value="framework">Framework</TabsTrigger>
@@ -38,7 +38,7 @@ const SkillsPage = () => {
                 <CardDescription>Language that i can use</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-center gap-4">
+                <div className="grid grid-cols-2 justify-center gap-4 md:grid-cols-3 lg:grid-cols-5">
                   {languageItems.map((items, index) => (
                     <CardSkills index={index} items={items} />
                   ))}
@@ -53,7 +53,7 @@ const SkillsPage = () => {
                 <CardDescription>Library that i often use</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-center gap-4">
+                <div className="grid grid-cols-2 justify-center gap-4 md:grid-cols-3 lg:grid-cols-5">
                   {libraryItems.map((items, index) => (
                     <CardSkills index={index} items={items} />
                   ))}
@@ -68,7 +68,7 @@ const SkillsPage = () => {
                 <CardDescription>Framework that i used before</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-center gap-4">
+                <div className="grid grid-cols-2 justify-center gap-4 md:grid-cols-3 lg:grid-cols-5">
                   {frameworkItems.map((items, index) => (
                     <CardSkills index={index} items={items} />
                   ))}
@@ -83,7 +83,7 @@ const SkillsPage = () => {
                 <CardDescription>Data bases.</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-center gap-4">
+                <div className="grid grid-cols-2 justify-center gap-4 md:grid-cols-3 lg:grid-cols-5">
                   {databaseItems.map((items, index) => (
                     <CardSkills index={index} items={items} />
                   ))}
@@ -100,7 +100,7 @@ const SkillsPage = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-center gap-4">
+                <div className="grid grid-cols-2 justify-center gap-4 md:grid-cols-3 lg:grid-cols-5">
                   {mediaItems.map((items, index) => (
                     <CardSkills index={index} items={items} />
                   ))}
