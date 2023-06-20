@@ -150,3 +150,21 @@ export const mediaItems = [
     link: "https://www.adobe.com/id_en/",
   },
 ]
+
+export const projects = [
+  {
+    title: "Shuna Chatbot",
+    desc: "ChatBot that can answer your question",
+    comment:
+      "I make this using my little heart with help of the god, if it's error don't complain, bcs its free",
+    last_updated: "updated 20 Jun 2023",
+    badge: ["Bot", "Chat", "AI"],
+    ava: "/assets/shuna.png",
+    tech: [
+      "Next.js",
+      "Typescript",
+      "Huggingface",
+    ],
+    link: "https://google.com",
+  },
+]
