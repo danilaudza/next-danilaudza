@@ -28,8 +28,3 @@ jobs:
         username: ${{ secrets.ftp_name }}
         password: ${{ secrets.ftp_password }}
         server-dir: ./next-main/
-        exclude: '
-        - **/.git*
-        - **/.git*/**
-        - **/node_modules/**
-        '
