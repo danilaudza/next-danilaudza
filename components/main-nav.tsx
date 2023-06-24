@@ -26,7 +26,7 @@ export function MainNav({ items }: MainNavProps) {
         <SheetTrigger>
           <Icons.menu />
         </SheetTrigger>
-        <SheetContent position={"left"}>
+        <SheetContent side={"left"}>
           <SheetHeader>
             <SheetTitle>Menu</SheetTitle>
             <SheetDescription>

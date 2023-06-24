@@ -165,6 +165,6 @@ export const projects = [
       "Typescript",
       "Huggingface",
     ],
-    link: "https://google.com",
+    link: "https://next-shuna.vercel.app/chat",
   },
 ]
