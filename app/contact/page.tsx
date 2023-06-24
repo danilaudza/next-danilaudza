@@ -25,7 +25,7 @@ const ContactPage = () => {
             </div>
             <div className="lg:p-8">
               <Tabs defaultValue="message" className="">
-                <TabsList className="mx-auto grid w-full grid-cols-2 w-[350px]">
+                <TabsList className="mx-auto grid w-[350px] grid-cols-2">
                   <TabsTrigger value="message">Message</TabsTrigger>
                   <TabsTrigger value="link">Links</TabsTrigger>
                 </TabsList>
