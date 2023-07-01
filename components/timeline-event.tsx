@@ -11,7 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
-const TimelineEvent = ({ date, event, desc, where, img }: any) => {
+const TimelineEvent = ({ date, event, desc, where, img, fallback }: any) => {
   if (!Array.isArray(desc)) {
     return null // or handle the non-array case accordingly
   }
@@ -21,7 +21,7 @@ const TimelineEvent = ({ date, event, desc, where, img }: any) => {
       {/* <div className="absolute top-5 -left-3.5 h-6 w-6 rounded-full border-4"> */}
       <Avatar className="absolute left-[-2.15rem] top-5 h-16 w-16 rounded-full">
         <AvatarImage src={img} />
-        <AvatarFallback>SN</AvatarFallback>
+        <AvatarFallback>{fallback}</AvatarFallback>
       </Avatar>
       {/* </div> */}
       <Card className="ml-10">

@@ -10,6 +10,7 @@ export const timelineData = [
     ],
     where: "DPH",
     img: "/assets/ugm.png",
+    fallback: "UG",
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ export const timelineData = [
     ],
     where: "Innovative Academy",
     img: "/assets/innoacademy.png",
+    fallback: "IA",
   },
   {
     id: 3,
@@ -36,5 +38,6 @@ export const timelineData = [
     ],
     where: "Myself",
     img: "/assets/shuna-trans.png",
+    fallback: "FL",
   },
 ]

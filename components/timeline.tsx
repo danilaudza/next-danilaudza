@@ -11,6 +11,7 @@ const Timeline = ({ data }: any) => {
           desc={event.desc}
           where={event.where}
           img={event.img}
+          fallback={event.fallback}
         />
       ))}
     </div>
