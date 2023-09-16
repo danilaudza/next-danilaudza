@@ -20,10 +20,10 @@ export default function IndexPage() {
         <h2 className="mb-10 scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
           Latest Upload
         </h2>
-        <div className="flex gap-8">
+        <div className="flex flex-col lg:flex-row gap-8">
           <div className="relative flex justify-center">
-            <div className="absolute h-full w-1/2 bg-pink-600 opacity-50 blur-3xl dark:bg-purple-600 dark:opacity-25"></div>
-            <div className="relative h-64 self-center overflow-hidden rounded-xl sm:h-72 md:h-96">
+            <div className="absolute h-1/2 w-1/2 bottom-0 bg-red-600 opacity-70 blur-3xl dark:bg-purple-600 dark:opacity-40"></div>
+            <div className="relative min-h-max self-center overflow-hidden rounded-xl sm:h-72 md:h-96">
               <iframe
                 className="aspect-video h-full"
                 src="https://www.youtube-nocookie.com/embed?listType=playlist&list=PLmTyU5d9Kg_cG-ZrjsvNxkHcVxVAN1PqL&rel=0&controls=0"
@@ -33,7 +33,7 @@ export default function IndexPage() {
               ></iframe>
             </div>
           </div>
-          <div>
+          <div className="flex flex-col justify-center">
             <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
               This is my YouTube
             </h3>
@@ -54,9 +54,9 @@ export default function IndexPage() {
           </div>
         </div>
       </section>
-      <section className="mt-20 bg-foreground">
+      <section className="mt-20 bg-black">
         <div className="flex h-64 items-center justify-center">
-          <p className="text-background">
+          <p className="text-white">
             Gud Bro👍
           </p>
         </div>
