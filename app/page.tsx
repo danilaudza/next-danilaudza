@@ -22,8 +22,8 @@ export default function IndexPage() {
         </h2>
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="relative flex justify-center">
-            <div className="absolute h-1/2 w-1/2 bottom-0 bg-red-600 opacity-70 blur-3xl dark:bg-purple-600 dark:opacity-40"></div>
-            <div className="relative min-h-max self-center overflow-hidden rounded-xl sm:h-72 md:h-96">
+            <div className="absolute h-1/2 w-1/2 bottom-0 bg-red-600 opacity-70 blur-3xl dark:bg-purple-600 dark:opacity-60"></div>
+            <div className="relative aspect-video min-h-max self-center overflow-hidden rounded-xl sm:h-72 md:h-96">
               <iframe
                 className="aspect-video h-full"
                 src="https://www.youtube-nocookie.com/embed?listType=playlist&list=PLmTyU5d9Kg_cG-ZrjsvNxkHcVxVAN1PqL&rel=0&controls=0"
@@ -42,11 +42,12 @@ export default function IndexPage() {
               time. this could be free storage right? I also sometimes live
               stream on this channel.
             </p>
-            <Button variant="link">
+            <Button variant="outline" className="max-w-max self-center lg:self-start mt-3">
               <a
                 href="https://www.youtube.com/@dlaudza"
                 target="_blank"
                 rel="noreferrer"
+                
               >
                 @Here Click Me!
               </a>

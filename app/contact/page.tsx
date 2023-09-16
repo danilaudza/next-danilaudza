@@ -12,9 +12,9 @@ const ContactPage = () => {
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
           Contact
         </h1>
-        <div className="mt-4 w-full rounded-lg border ">
-          <div className="container relative grid h-[800px] items-center justify-center lg:max-w-none lg:grid-cols-2 lg:px-0">
-            <div className="relative hidden h-full  flex-col bg-muted p-10 text-white dark:border-r lg:flex">
+        <div className="mt-4 w-full rounded-lg border">
+          <div className="container  relative grid h-[800px] w-80 items-center justify-center lg:w-full lg:grid-cols-2 lg:px-0">
+            <div className="relative hidden h-full flex-col bg-muted p-10 text-white dark:border-r lg:flex">
               <div
                 className="absolute inset-0 rounded-l-lg bg-cover"
                 style={{
@@ -25,7 +25,7 @@ const ContactPage = () => {
             </div>
             <div className="lg:p-8">
               <Tabs defaultValue="message" className="">
-                <TabsList className="mx-auto grid w-[350px] grid-cols-2">
+                <TabsList className="mx-auto grid w-[280px] lg:w-[350px] grid-cols-2">
                   <TabsTrigger value="message">Message</TabsTrigger>
                   <TabsTrigger value="link">Links</TabsTrigger>
                 </TabsList>

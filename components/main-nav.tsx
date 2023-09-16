@@ -31,7 +31,7 @@ export function MainNav({ items }: MainNavProps) {
             <SheetHeader>
               <SheetTitle>Where to go?</SheetTitle>
               <SheetDescription>
-                <nav className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2">
                   {items?.map(
                     (item, index) =>
                       item.href && (
@@ -49,7 +49,7 @@ export function MainNav({ items }: MainNavProps) {
                         </SheetClose>
                       )
                   )}
-                </nav>
+                </div>
               </SheetDescription>
             </SheetHeader>
           </SheetContent>
