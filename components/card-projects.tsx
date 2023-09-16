@@ -18,7 +18,7 @@ const CardProjects = ({items,index}:any) => {
         <div className="flex items-start gap-4">
           <Avatar>
             <AvatarImage src={items.ava} />
-            <AvatarFallback>CN</AvatarFallback>
+            <AvatarFallback>{items.fallback}</AvatarFallback>
           </Avatar>
           <div>
             <CardTitle>{items.title}</CardTitle>

@@ -6,6 +6,7 @@ import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetDescription,
   SheetHeader,
@@ -21,40 +22,41 @@ interface MainNavProps {
 export function MainNav({ items }: MainNavProps) {
   return (
     <div className="flex gap-6 md:gap-10">
-      <div className="h-6 w-6 md:hidden" >
-      <Sheet>
-        <SheetTrigger>
-          <Icons.menu />
-        </SheetTrigger>
-        <SheetContent side={"left"}>
-          <SheetHeader>
-            <SheetTitle>Menu</SheetTitle>
-            <SheetDescription>
-              <nav className="flex flex-col gap-2">
-              {items?.map(
-                (item, index) =>
-                  item.href && (
-                    <Link
-                      key={index}
-                      href={item.href}
-                      className={cn(
-                        "flex items-center text-sm font-medium text-muted-foreground",
-                        item.disabled && "cursor-not-allowed opacity-80"
-                      )}
-                    >
-                      {item.title}
-                    </Link>
-                  )
-              )}
-              </nav>
-            </SheetDescription>
-          </SheetHeader>
-        </SheetContent>
-      </Sheet>
+      <div className="h-6 w-6 md:hidden">
+        <Sheet>
+          <SheetTrigger>
+            <Icons.menu />
+          </SheetTrigger>
+          <SheetContent side={"left"}>
+            <SheetHeader>
+              <SheetTitle>Where to go?</SheetTitle>
+              <SheetDescription>
+                <nav className="flex flex-col gap-2">
+                  {items?.map(
+                    (item, index) =>
+                      item.href && (
+                        <SheetClose asChild>
+                          <Link
+                            key={index}
+                            href={item.href}
+                            className={cn(
+                              "flex items-center text-2xl font-medium text-muted-foreground transition-all duration-300 hover:text-foreground",
+                              item.disabled && "cursor-not-allowed opacity-80"
+                            )}
+                          >
+                            {item.title}
+                          </Link>
+                        </SheetClose>
+                      )
+                  )}
+                </nav>
+              </SheetDescription>
+            </SheetHeader>
+          </SheetContent>
+        </Sheet>
       </div>
       <Link href="/" className="flex items-center space-x-2">
-        <Icons.logo className="h-6 w-6" />
-        <span className="inline-block font-bold">{siteConfig.name}</span>
+        <span className="inline-block font-bold">&sol;&sol;danilaudza</span>
       </Link>
       {items?.length ? (
         <nav className="hidden gap-6 md:flex">
@@ -65,7 +67,7 @@ export function MainNav({ items }: MainNavProps) {
                   key={index}
                   href={item.href}
                   className={cn(
-                    "flex items-center text-sm font-medium text-muted-foreground",
+                    "flex items-center text-sm font-medium text-muted-foreground transition-all duration-300 hover:text-foreground",
                     item.disabled && "cursor-not-allowed opacity-80"
                   )}
                 >

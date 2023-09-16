@@ -160,11 +160,20 @@ export const projects = [
     last_updated: "updated 20 Jun 2023",
     badge: ["Bot", "Chat", "AI"],
     ava: "/assets/shuna.png",
-    tech: [
-      "Next.js",
-      "Typescript",
-      "Huggingface",
-    ],
+    fallback: "CH",
+    tech: ["Next.js", "Typescript", "Huggingface"],
     link: "https://next-shuna.vercel.app/chat",
+  },
+  {
+    title: "QR Generator",
+    desc: "Just make a QR with ease!",
+    comment:
+      "For you who want to make a QR fast and easy with minimalist design",
+    last_updated: "updated 16 Sep 2023",
+    badge: ["QR", "Image", "Svg"],
+    ava: "/assets/projects/qr.svg",
+    fallback: "QR",
+    tech: ["qrcode.react", "Typescript", "Next.js"],
+    link: "https://next-shuna.vercel.app/qr",
   },
 ]

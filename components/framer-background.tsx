@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 const FramerBackground = () => {
   return (
-    <div className="absolute -z-10 h-screen w-screen overflow-hidden ">
+    <div className="absolute -z-10 h-screen w-screen max-w-full overflow-hidden">
       <motion.div
         animate={{
           scale: [1, 1.2, 1],
