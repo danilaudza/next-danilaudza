@@ -56,7 +56,7 @@ export function MainNav({ items }: MainNavProps) {
         </Sheet>
       </div>
       <Link href="/" className="flex items-center space-x-2">
-        <span className="inline-block font-bold">&sol;&sol;danilaudza</span>
+        <span className="inline-block font-bold">&#47;&#47;danilaudza</span>
       </Link>
       {items?.length ? (
         <nav className="hidden gap-6 md:flex">
